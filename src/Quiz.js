@@ -1,12 +1,14 @@
 import React from 'react'
-import Questions1 from './Questions1'
+import Step1 from './Step1'
 import Questions2 from './Questions2'
 import Questions3 from './Questions3'
+import data from './data.json'
 
-export default class Questionnaire extends React.Component {
+export default class Quiz extends React.Component {
     constructor() {
         super()
         this.state = {
+            data: data,
             currentStep: 1,
             selected: [],
             name: ''
@@ -28,7 +30,7 @@ export default class Questionnaire extends React.Component {
 
     addName = (name) => {
         this.setState({
-            name: name
+            name
         })
     }
 
@@ -46,22 +48,20 @@ export default class Questionnaire extends React.Component {
             headers: {
                 'Content-Type': 'application/json'
             }
-        }).then(response => console.log(response))
+        })
     }
 
-    next = () => {
-        let currentStep = this.state.currentStep + 1;
+    navigateTo = (e) => {
+        let nextStep = this.state.currentStep
+
+        if (e.currentTarget.attributes.navigate.value === 'next') {
+            nextStep++;
+        } else {
+            nextStep--;
+        }
 
         this.setState({
-            currentStep: currentStep
-        });
-    }
-
-    prev = () => {
-        let currentStep = this.state.currentStep - 1;
-
-        this.setState({
-            currentStep: currentStep
+            currentStep: nextStep
         });
     }
 
@@ -76,15 +76,15 @@ export default class Questionnaire extends React.Component {
     render() {
         return (
             <div className="questionnaire">
-                <Questions1 onUpdateSelected={ this.updateSelected } currentStep={this.state.currentStep} selected={this.state.selected} />
+                <Step1 onUpdateSelected={ this.updateSelected } currentStep={this.state.currentStep} selected={this.state.selected} />
                 <Questions2 onUpdateSelected={ this.updateSelected } currentStep={this.state.currentStep} selected={this.state.selected} />
                 <Questions3 onUpdateSelected={ this.updateSelected } currentStep={this.state.currentStep} onDataSend={ this.onSendData } onNameChange={ this.addName} />
                 <div className="questionnaire__navigation">
                     {this.state.currentStep !== 1 &&
-                        <button className="button" onClick={this.prev}>Previous Question</button>
+                        <button className="button" navigate="prev" onClick={this.navigateTo}>Previous Question</button>
                     }
                     {this.state.currentStep !== 3 &&
-                        <button className="button" onClick={this.next}>Next Question</button>
+                        <button className="button" navigate="next" onClick={this.navigateTo}>Next Question</button>
                     }
                 </div>
                 <button className="text-link" onClick={ this.resetQuestionnaire }>Reset answers</button>

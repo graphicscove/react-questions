@@ -1,7 +1,7 @@
 import React from 'react'
 
 class Name extends React.Component {
-    render(props) {
+    render() {
         return (
             <span data-element="name">{this.props.name}</span>
         )

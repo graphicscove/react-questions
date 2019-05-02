@@ -1,13 +1,13 @@
 import React from 'react';
-import Questionnaire from './Questionnaire'
+import Quiz from './Quiz'
 import './app.sass';
 
 const App = () => (
     <div className="app">
         <header className="app__header">
-            <h1>Questionnaire</h1>
+            <h1>Quiz</h1>
         </header>
-        <Questionnaire />
+        <Quiz />
         <footer className="app__footer">
 
         </footer>

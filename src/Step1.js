@@ -1,6 +1,6 @@
 import React from 'react'
 
-class Questions1 extends React.Component {
+class Step1 extends React.Component {
     render() {
         const props = this.props
 
@@ -28,4 +28,4 @@ class Questions1 extends React.Component {
     }
 }
 
-export default Questions1
+export default Step1

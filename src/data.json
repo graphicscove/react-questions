@@ -1,0 +1,29 @@
+{
+    "total": "3",
+    "questions": [
+        {
+            "question": "What is the scientific name of a butterfly?",
+            "type": "checkbox",
+            "answers": [
+                "Apis",
+                "Coleoptera",
+                "Formicidae",
+                "Rhopalocera"
+            ]
+        },
+        {
+            "question": "How hot is the surface of the sun?",
+            "type": "radio",
+            "answers": [
+                "1,233 K",
+                "5,778 K",
+                "12,130 K",
+                "101,300 K"
+            ]
+        },
+        {
+            "question": "What is your name?",
+            "type": "input"
+        }
+    ]
+}

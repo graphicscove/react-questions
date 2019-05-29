@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import Quiz from './Quiz'
-import './app.sass';
+import './app.sass'
 
 const App = () => (
     <div className="app">

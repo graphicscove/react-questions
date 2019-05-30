@@ -1,29 +1,48 @@
 {
-    "total": "3",
-    "questions": [
-        {
-            "question": "What is the scientific name of a butterfly?",
-            "type": "checkbox",
-            "answers": [
-                "Apis",
-                "Coleoptera",
-                "Formicidae",
-                "Rhopalocera"
-            ]
+    "quiz_1": {
+        "name": "CSS",
+        "question_1": {
+            "question": "What does CSS stand for?",
+            "answers": ["Cascading Style Sheets", "Computer Style Sheets", "Colorful Style Sheets", "Creative Style Sheets"],
+            "correctAnswer": 1
         },
-        {
-            "question": "How hot is the surface of the sun?",
-            "type": "radio",
-            "answers": [
-                "1,233 K",
-                "5,778 K",
-                "12,130 K",
-                "101,300 K"
-            ]
+        "question_2": {
+            "question": "What is the correct HTML for referring to an external style sheet?",
+            "answers": ["<link rel='stylesheet' type='text/css' href='mystyle.css'>", "<style src='mystyle.css'>", "<stylesheet> mystyle.css </stylesheet>", "<link src='stylesheet' type='text/css' href='mystyle.css'>"],
+            "correctAnswer": 1
         },
-        {
-            "question": "What is your name?",
-            "type": "input"
+        "question_3": {
+            "question": "Correct place to refer to an external style sheet in HTML document?",
+            "answers": ["In the <head> section", "In the <body> section", "At the start of the document", "At the end of the document"],
+            "correctAnswer": 1
+        },
+        "question_4": {
+            "question": "The tag goes inside?",
+            "answers": ["the body section", "the head section", "the title section", "None of the above"],
+            "correctAnswer": 2
         }
-    ]
+    },
+    "quiz_2": {
+        "name": "HTML",
+        "question_1": {
+            "question": "What does HTML stand for?",
+            "answers": ["Hyperlinks and Text Markup Language", "Home Tool Markup Language", "Hyper Text Markup Language", "Hyper Text Programming Language"],
+            "correctAnswer": 3
+        },
+        "question_2": {
+            "question": "Who is making the Web standards?",
+            "answers": ["Microsoft", "The World Wide Web Consortium", "Oracle", "Google"],
+            "correctAnswer": 2
+        },
+        "question_3": {
+            "question": "Choose the correct HTML element for the smallest heading?",
+            "answers": ["<h6>", "<head>", "<h1>", "<heading>"],
+            "correctAnswer": 1
+        },
+        "question_4": {
+            "question": "Choose the correct HTML element for the largest heading?",
+            "answers": ["<h6>", "<head>", "<h1>", "<heading>"],
+            "correctAnswer": 3
+        }
+    }
 }
